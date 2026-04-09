@@ -1,0 +1,227 @@
+/*
+  Posicionamento no CSS — Guia didático e objetivo (refeito)
+
+  Estrutura: para cada valor de `position` há uma explicação simples, quando usar,
+  um pequeno exemplo e observações/práticas comuns. No final há exemplos HTML
+  comentados que você pode colar em um arquivo para testar.
+*/
+
+/* -------------------------------------------------------------
+   0) Nota rápida
+   - position controla COMO o elemento é posicionado no layout.
+   - top/right/bottom/left só têm efeito quando `position` é diferente de `static`.
+*/
+
+/* -------------------------------------------------------------
+   1) position: static (padrão)
+   O que é: o elemento participa do fluxo normal da página.
+   Quando usar: comportamento padrão para a maioria dos elementos.
+   Observação: propriedades top/right/bottom/left e z-index não afetam elementos static.
+*/
+
+.pos-static {
+  position: static; /* valor padrão */
+  padding: 8px;
+  background: #f7f7f7;
+}
+
+/* -------------------------------------------------------------
+   2) position: relative
+   O que é: mantém o elemento no fluxo, mas permite deslocamento visual.
+   Quando usar: pequenos ajustes visuais; criar um "contêiner posicionado"
+   para que filhos absolute usem este elemento como referência.
+   Comportamento importante: o espaço original do elemento permanece.
+*/
+
+.pos-relative {
+  position: relative;
+  top: 0; /* sem deslocamento inicial */
+  background: #eaf4ff;
+  padding: 8px;
+}
+
+/* Exemplo: deslocar levemente sem alterar o fluxo */
+.pos-relative--shift {
+  position: relative;
+  left: 12px; /* visualmente deslocado 12px para a direita */
+}
+
+/* Uso prático: tornar o pai referência para filhos absolute */
+.example-card { position: relative; }
+
+/* -------------------------------------------------------------
+   3) position: absolute
+   O que é: remove o elemento do fluxo normal; posicionado em relação
+            ao ancestor posicionado mais próximo (position != static).
+   Quando usar: tooltips, popovers, menus flutuantes, posicionamento preciso.
+   Dica: combine com um pai `position: relative` para controlar o contexto.
+*/
+
+.pos-absolute-parent { position: relative; padding: 16px; background: #fff7e6; }
+.pos-absolute-child {
+  position: absolute;
+  top: 8px;   /* 8px a partir do topo do ancestor posicionado */
+  right: 8px; /* 8px da borda direita do ancestor */
+  background: #ffd27a;
+  padding: 6px;
+}
+
+/* Observação: elementos absolute não ocupam espaço no fluxo, então outros
+   elementos podem se mover como se o absolute não existisse. */
+
+/* -------------------------------------------------------------
+   4) position: fixed
+   O que é: semelhante ao absolute, mas preso ao viewport (janela do navegador).
+   Quando usar: cabeçalhos fixos, botões de ação que devem ficar visíveis ao rolar.
+   Exemplo: um botão no canto inferior direito que permanece visível.
+*/
+
+.pos-fixed {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: #2b8a3e;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+/* Observação: fixed ignora limites de contêineres — sempre relativo ao viewport. */
+
+/* -------------------------------------------------------------
+   5) position: sticky
+   O que é: comportamento híbrido: age como relative até um ponto de scroll,
+            depois comporta-se como fixed dentro do seu ancestor.
+   Quando usar: cabeçalhos de seção que 'grudam' ao rolar.
+   Requisitos: precisa de um valor para top/right/bottom/left e um ancestor
+               que permita rolagem; pode falhar dentro de alguns contextos.
+*/
+
+.pos-sticky {
+  position: sticky;
+  top: 0; /* posição onde passa a ficar fixa */
+  background: #fff3e0;
+  padding: 8px;
+  border-bottom: 1px solid #ffd8a8;
+}
+
+/* -------------------------------------------------------------
+   6) top / right / bottom / left — explicação detalhada
+
+   O que são:
+     - `top`, `right`, `bottom`, `left` são propriedades de offset que deslocam
+       um elemento do seu ponto de referência.
+
+   Quando têm efeito:
+     - Só afetam elementos com `position` diferente de `static` (relative, absolute, fixed, sticky).
+
+   Referência de medida (containing block):
+     - Para `absolute`: a referência é o primeiro ancestor posicionado (position ≠ static).
+     - Para `fixed`: normalmente a referência é o viewport, mas pode mudar se um ancestor
+       criar um novo contexto (por exemplo com `transform`).
+     - Para `sticky`: a referência é o ancestor que define a área de rolagem (o container de scroll).
+
+   Como porcentagens funcionam:
+     - Porcentagens em `left`/`right` são relativas à largura do containing block.
+     - Porcentagens em `top`/`bottom` são relativas à altura do containing block.
+     - Exemplo: `left:50%` move o elemento 50% da largura do bloco de referência.
+
+   Valores comuns e comportamento:
+     - `auto` (padrão para muitos casos): o navegador calcula; por exemplo `top:auto` não aplica offset.
+     - valores em px, %, em, rem, etc. são aceitos; valores negativos deslocam em direção oposta.
+
+   Em `position: relative`:
+     - O elemento mantém seu espaço no fluxo; `top/left` movem apenas a posição visual.
+     - Útil para pequenos ajustes ou criar ponto de referência para pseudo-elementos.
+
+   Em `position: absolute` / `fixed`:
+     - O elemento sai do fluxo; `top/right/bottom/left` fixam a posição relativa ao ancestor/viewport.
+     - Use `position: relative` no pai para controlar o ponto de referência.
+
+   Em `position: sticky`:
+     - `top` define a distância do topo onde o elemento passa de relativo → fixo.
+     - `sticky` precisa de um ancestor que permita rolagem e de um offset definido (ex.: `top:0`).
+
+   Shorthand `inset`:
+     - `inset: 10px 20px;` equivale a `top:10px; right:20px; bottom:10px; left:20px`.
+
+   Centralização prática (receita):
+     - Para centralizar perfeitamente um elemento absoluto dentro do pai:
+         .center { position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); }
+       Por que: `left:50%` posiciona o canto do elemento; `transform` corrige para o centro.
+
+   Exemplo com porcentagem (centro horizontal relativo ao pai):
+     .thumb { position:absolute; left:50%; transform: translateX(-50%); }
+
+   Exemplo de uso negativo (elevação visual):
+     .raise { position: relative; top: -8px; }
+     -> desloca 8px para cima sem alterar fluxo.
+
+   Performance e repaint:
+     - Alterar `top/left` causa repaint/reflow; para animações suaves prefira `transform` e `opacity`.
+
+   Erros comuns relacionados a offsets:
+     - Aplicar `top` em elemento `position: static` (nenhum efeito).
+     - Esperar que `top:50%` centralize verticalmente sem `transform` (alinha o canto superior).
+     - Usar porcentagens sem entender qual é a dimensão de referência (largura vs altura).
+
+   Exemplos práticos (CSS):
+     .offset-example-1 { position: absolute; left: 20px; top: 10px; }
+     .offset-example-2 { position: absolute; left: 50%; transform: translateX(-50%); }
+
+   Observação sobre unidades lógicas:
+     - Em layouts com escrita vertical ou com `writing-mode`, considere usar propriedades lógicas
+       (`inset-inline-start`, `inset-block-start`) para compatibilidade.
+
+   Em resumo: sempre verifique o `position` do elemento e do seu ancestor, pense se a porcentagem
+   é relativa à largura ou altura do contêiner e prefira `transform` para animações.
+*/
+
+/* -------------------------------------------------------------
+   7) z-index (ordem de empilhamento rápida)
+   - Só funciona em elementos com position diferente de static.
+   - Valores maiores ficam acima de valores menores.
+   - Use com moderação; prefira contextos claros de empilhamento.
+*/
+
+.pos-z-high { position: relative; z-index: 50; }
+.pos-z-low { position: relative; z-index: 1; }
+
+/* -------------------------------------------------------------
+   8) Erros comuns (e como consertar) — direto ao ponto
+   - Esperar que absolute se posicione em relação ao pai sem que o pai seja posicionado.
+     -> Solução: coloque `position: relative` no pai.
+   - Usar top:50% esperando centralizar verticalmente.
+     -> Solução: combine com transform: translateY(-50%).
+   - Esquecer que absolute remove do fluxo, quebrando espaçamentos.
+     -> Solução: preveja espaço ou use outra abordagem (flex/grid).
+   - Achar que fixed funciona dentro de um container (ele usa viewport).
+     -> Solução: use sticky ou absolute conforme o caso.
+*/
+
+/* -------------------------------------------------------------
+   9) Exemplos HTML comentados — cole num arquivo .html para testar
+
+  <!-- Relative vs Absolute -->
+  <div class="pos-absolute-parent" style="width:320px; height:120px; border:1px solid #ddd;">
+    Pai posicionado (position: relative)
+    <div class="pos-absolute-child">Filho absolute (top:8px; right:8px)</div>
+  </div>
+
+  <!-- Fixed -->
+  <div style="height:1000px;">Role para ver o botão fixo</div>
+  <div class="pos-fixed">Botão fixo</div>
+
+  <!-- Sticky -->
+  <div style="height:200px; overflow:auto; border:1px solid #ddd;">
+    <div class="pos-sticky">Cabeçalho sticky (top:0)</div>
+    <div style="height:600px">Conteúdo para rolar</div>
+  </div>
+
+/* -------------------------------------------------------------
+   10) Prática recomendada
+   - Use position apenas quando necessário; prefira layout com flex/grid.
+   - Use relative para criar contexto de posicionamento (pai).
+   - Use absolute/fixed/sticky para elementos que realmente precisam estar fora do fluxo.
+*/
+

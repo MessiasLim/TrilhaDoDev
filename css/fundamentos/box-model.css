@@ -1,0 +1,182 @@
+/*
+  Box Model no CSS — Guia didático e detalhado (linguagem simples)
+
+  O objetivo: explicar o que são e como funcionam:
+  - content (conteúdo)
+  - padding (preenchimento)
+  - border (borda)
+  - margin (margem)
+  - box-sizing (como o navegador calcula o tamanho)
+
+  Inclui exemplos práticos, cálculos e dicas comuns.
+*/
+
+/* -------------------------------------------------------------
+   1) Conceitos básicos (simples)
+   - content: a área onde o conteúdo (texto, imagem) fica; é o "tamanho" definido
+     por `width` e `height` quando usamos `box-sizing: content-box`.
+   - padding: espaço interno entre o conteúdo e a borda. Aumenta o tamanho visual.
+   - border: borda ao redor do padding (e do conteúdo). Também aumenta o tamanho.
+   - margin: espaço externo entre elementos; não faz parte do box em si.
+   - box-sizing: define se o `width`/`height` inclui padding/border ou não.
+*/
+
+/* -------------------------------------------------------------
+   2) Visual simples (ASCII)
+
+   margin (fora do box)
+   ┌──────────────────────────────────────────┐
+   │              margin (espaço)             │
+   │  ┌────────────────────────────────────┐  │
+   │  │ border (borda)                     │  │
+   │  │  ┌──────────────────────────────┐  │  │
+   │  │  │ padding (preenchimento)      │  │  │
+   │  │  │  ┌────────────────────────┐  │  │  │
+   │  │  │  │ content (texto/imagem) │  │  │  │
+   │  │  │  └────────────────────────┘  │  │  │
+   │  │  └──────────────────────────────┘  │  │
+   │  └────────────────────────────────────┘  │
+   └──────────────────────────────────────────┘
+
+   */
+
+/* -------------------------------------------------------------
+   3) Exemplo prático com cálculo
+
+   CSS:
+     .box {
+       width: 200px;           /-- largura definida --/
+       padding: 10px;          /-- 10px left + 10px right --/
+       border: 2px solid #000; /-- 2px left + 2px right --/
+       margin: 20px;           /-- 20px left + 20px right (externo) --/
+     }
+
+   Cálculo do tamanho total horizontal (quando box-sizing: content-box):
+     largura do conteúdo (width) = 200px
+     padding total = 10 + 10 = 20px
+     border total = 2 + 2 = 4px
+     margem total (externa) = 20 + 20 = 40px
+
+   - largura ocupada pelo box (sem margens) = 200 + 20 + 4 = 224px
+   - espaço total horizontal incluindo margens = 224 + 40 = 264px
+
+   Observação: se `box-sizing: border-box`, o `width: 200px` já inclui padding e border,
+   então o espaço interno disponível para conteúdo = 200 - padding - border = 200 - 20 - 4 = 176px
+*/
+
+/* Exemplo em CSS (prático) */
+.box {
+  width: 200px; /* largura declarada */
+  padding: 10px; /* aumenta espaço interno */
+  border: 2px solid #222; /* aumenta o tamanho externo do box (content-box) */
+  margin: 20px; /* espaço fora do box */
+  background: #f5f5f5;
+}
+
+
+/* -------------------------------------------------------------
+   4) box-sizing explicado (simples)
+
+   - content-box (padrão): o `width` e `height` se aplicam apenas ao conteúdo.
+     padding e border são adicionados fora desse tamanho.
+   - border-box: o `width` e `height` incluem padding e border.
+
+   Recomenda-se usar `border-box` globalmente em muitos projetos, porque
+   facilita o cálculo e evita surpresas ao aplicar padding/border.
+*/
+
+/* Reset recomendado: usar box-sizing: border-box em toda a página */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Quando precisar do comportamento antigo, defina explicitamente: */
+.legacy { box-sizing: content-box; }
+
+
+/* -------------------------------------------------------------
+   5) Altura e conteúdo dinâmico
+
+   - Quando conteúdo cresce (texto que quebra em várias linhas), o elemento
+     expande sua altura (se não tiver height fixo).
+   - Padding vertical e border também somam à altura quando box-sizing: content-box.
+   - Margens verticais entre elementos do mesmo fluxo podem colapsar
+     (margin collapsing): ex. o margin-bottom do elemento A pode se combinar
+     com o margin-top do elemento B adjacente.
+
+   Exemplo prático:
+     .card { 
+        padding: 16px; 
+        border: 1px solid #ddd; 
+     }
+
+     p {
+        margin: 0 0 1rem 0; 
+    } /* margens verticais comuns em parágrafos 
+
+   Nota: para evitar colapso de margem entre pai e primeiro/último filho, você
+   pode adicionar padding ou borda no elemento pai, ou usar overflow: auto;
+
+*/
+
+
+/* -------------------------------------------------------------
+   6) Centrar com margin auto
+
+   - Para centralizar horizontalmente um bloco com largura fixa:
+       .center { width: 600px; margin-left: auto; margin-right: auto; }
+   - Funciona porque as margens laterais são distribuídas igualmente.
+
+*/
+
+.center {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* -------------------------------------------------------------
+   7) Trabalhando com box-sizing e componentes responsivos
+
+   - Com `box-sizing: border-box` é mais fácil usar percentuais e paddings,
+     por exemplo `width: 50%` com padding sem quebrar a grade.
+   - Em grids flexíveis, mantenha box-sizing: border-box para evitar overflow
+     indesejado quando somar padding/border.
+
+   Exemplo:
+     .col { 
+        width: 50%; padding: 16px; 
+     } /* com border-box: a coluna continuará a caber 
+
+*/
+
+
+/* -------------------------------------------------------------
+   8) Dicas e erros comuns (rápido e direto)
+   - Erro: esquecer que padding/border aumentam o tamanho (content-box).
+     Solução: usar border-box ou ajustar width com calc().
+   - Erro: margin collapsing confundindo layout vertical.
+     Solução: adicionar padding/border ao pai ou usar overflow.
+   - Erro: usar percentuais em width sem entender o efeito do padding.
+     Solução: usar border-box ou compensar com `calc(100% - 2rem)`.
+   - Erro: remover outline do focus sem fornecer alternativa acessível.
+     Solução: estilizar :focus de forma visível.
+
+*/
+
+
+/* -------------------------------------------------------------
+   9) Exemplos HTML comentados para testar (copie para um .html)
+
+  <div class="box">Conteúdo</div>
+
+  <div class="center">Conteúdo centralizado</div>
+
+  <div class="card">
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
+  </div>
+
+  Experimente alterar `box-sizing` no DevTools e veja como muda o cálculo.
+*/
