@@ -98,7 +98,7 @@ Incluem:
 ## Clonar o projeto
 
 ```sh
-git clone <seu-repositorio>
+git clone https://github.com/MessiasLim/TrilhaDoDev.git
 ```
 
 
