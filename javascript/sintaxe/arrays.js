@@ -1,5 +1,3 @@
-
-
 /*
 ===========================================
 ===== AULA 5: ARRAYS EM JAVASCRIPT =====
@@ -89,36 +87,36 @@ para adicionar, remover, buscar e manipular elementos.
 Abaixo estão os principais, com uma explicação clara
 do que cada um faz.
 
-✔️ push() 
+push() 
 → adiciona um ou mais elementos NO FINAL do array
 → modifica o array original
 
-✔️ pop() 
+pop() 
 → remove o ÚLTIMO elemento do array
 → modifica o array original
 
-✔️ unshift() 
+unshift() 
 → adiciona um ou mais elementos NO INÍCIO do array
 → modifica o array original
 
-✔️ shift() 
+shift() 
 → remove o PRIMEIRO elemento do array
 → modifica o array original
 
-✔️ indexOf() 
+indexOf() 
 → retorna o índice (posição) de um elemento
 → se não encontrar, retorna -1
 
-✔️ includes() 
+includes() 
 → verifica se um elemento existe no array
 → retorna true ou false
 
-✔️ slice() 
+slice() 
 → recorta uma parte do array
 → NÃO altera o array original
 → o segundo índice não é incluído
 
-✔️ splice() 
+splice() 
 → remove, adiciona ou substitui elementos
 → ALTERA o array original
 */
@@ -175,50 +173,50 @@ Esses métodos são muito usados no dia a dia do JavaScript
 para percorrer, transformar, filtrar e analisar arrays
 de forma mais clara, legível e funcional.
 
-✔️ forEach() 
+forEach() 
 → percorre todos os elementos do array
 → executa uma função para cada item
 → NÃO retorna um novo array (retorno é undefined)
 
-✔️ map() 
+map() 
 → transforma cada elemento do array
 → retorna um NOVO array com os valores modificados
 → NÃO altera o array original
 
-✔️ filter() 
+filter() 
 → filtra elementos com base em uma condição
 → retorna um NOVO array apenas com os elementos aprovados
 → NÃO altera o array original
 
-✔️ reduce() 
+reduce() 
 → reduz o array a um único valor (número, string, objeto, etc.)
 → usa um acumulador que guarda o resultado parcial
 → muito usado para somas, médias, contagens e agrupamentos
 
-✔️ some() 
+some() 
 → verifica se PELO MENOS UM elemento atende à condição
 → retorna true ou false
 → para a execução assim que encontra um caso verdadeiro
 
-✔️ every() 
+every() 
 → verifica se TODOS os elementos atendem à condição
 → retorna true ou false
 → para a execução assim que encontra um caso falso
 
-✔️ find() 
+find() 
 → retorna o PRIMEIRO elemento que satisfaz a condição
 → se não encontrar, retorna undefined
 
-✔️ reverse() 
+reverse() 
 → inverte a ordem dos elementos do array
 → ALTERA o array original
 
-✔️ split() 
+split() 
 → divide uma STRING em um ARRAY
 → o separador define onde a string será cortada
 → MÉTODO DE STRING
 
-✔️ join() 
+join() 
 → junta os elementos de um ARRAY em uma STRING
 → o separador define como os elementos serão unidos
 → MÉTODO DE ARRAY
@@ -330,14 +328,14 @@ console.log("Frase invertida (join):", fraseInvertida);
 ============================================================
  DICAS IMPORTANTES:
 
-✔️ Arrays são estruturas dinâmicas — podem crescer ou diminuir.
-✔️ Os índices começam em 0.
-✔️ map, filter e reduce são essenciais para programação funcional.
-✔️ forEach é ideal quando você só precisa executar ações, sem retorno.
-✔️ some e every são eficientes, pois interrompem a execução cedo.
-✔️ reverse() altera o array original — use com cuidado.
-✔️ Esses métodos deixam o código mais limpo, legível e profissional.
-✔️ São amplamente usados em React, Node.js e APIs REST.
+Arrays são estruturas dinâmicas — podem crescer ou diminuir.
+Os índices começam em 0.
+map, filter e reduce são essenciais para programação funcional.
+forEach é ideal quando você só precisa executar ações, sem retorno.
+some e every são eficientes, pois interrompem a execução cedo.
+reverse() altera o array original — use com cuidado.
+Esses métodos deixam o código mais limpo, legível e profissional.
+São amplamente usados em React, Node.js e APIs REST.
 
 /*
 ============================================================

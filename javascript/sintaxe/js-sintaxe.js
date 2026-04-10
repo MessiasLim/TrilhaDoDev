@@ -256,10 +256,10 @@ Operadores são símbolos especiais que dizem ao computador para realizar uma op
 
 Eles são a base da construção de decisões e cálculos nos programas.
 
-👇 A seguir, vamos ver os principais tipos de operadores em JavaScript:
+A seguir, vamos ver os principais tipos de operadores em JavaScript:
 
 ============================================================
-🔢 1. OPERADORES ARITMÉTICOS (Matemáticos)
+1. OPERADORES ARITMÉTICOS (Matemáticos)
 ============================================================
 
 Esses operadores lidam com números. Eles servem para fazer contas:
@@ -410,7 +410,7 @@ console.log("É menor ou sem carteira?", idade1 < 18 || !temCarteira); // false
 
 /*
 ============================================================
-🧬 5. OPERADORES DE INCREMENTO E DECREMENTO
+5. OPERADORES DE INCREMENTO E DECREMENTO
 ============================================================
 
 ++ ➜ incrementa 1 unidade
@@ -442,9 +442,9 @@ console.log("++x:", ++y); // 7 (incrementa antes)
 ============================================================
  BOAS PRÁTICAS
 
-✔️ Use === e !== sempre que possível (evita bugs com conversão de tipo)
-✔️ Deixe o código claro: evite condições complicadas demais
-✔️ Use parênteses para organizar condições lógicas complexas
+Use === e !== sempre que possível (evita bugs com conversão de tipo)
+Deixe o código claro: evite condições complicadas demais
+Use parênteses para organizar condições lógicas complexas
 
 ============================================================
 
@@ -577,9 +577,9 @@ switch (opcao) {
 /*
  IMPORTANTE:
 
-✔️ Use IF/ELSE para decisões com múltiplas condições complexas (>, <, ==, etc.)
-✔️ Use SWITCH para comparar valores exatos com muitas opções
-✔️ Use o OPERADOR TERNÁRIO para decisões simples e rápidas
+Use IF/ELSE para decisões com múltiplas condições complexas (>, <, ==, etc.)
+Use SWITCH para comparar valores exatos com muitas opções
+Use o OPERADOR TERNÁRIO para decisões simples e rápidas
 
 ============================================================
  DICAS DE LEITURA LÓGICA
@@ -748,12 +748,12 @@ for (let i = 1; i <= 5; i++) {
 ============================================================
  RESUMO DOS LAÇOS
 
-✔️ FOR → quando souber o número de repetições
-✔️ WHILE → quando não souber o número de repetições, mas souber a condição de parada
-✔️ DO WHILE → quando quiser executar pelo menos uma vez antes de verificar a condição
+FOR → quando souber o número de repetições
+WHILE → quando não souber o número de repetições, mas souber a condição de parada
+DO WHILE → quando quiser executar pelo menos uma vez antes de verificar a condição
 
-✔️ BREAK → interrompe o laço
-✔️ CONTINUE → pula a iteração atual
+BREAK → interrompe o laço
+CONTINUE → pula a iteração atual
 
 ============================================================
 */
@@ -851,36 +851,36 @@ para adicionar, remover, buscar e manipular elementos.
 Abaixo estão os principais, com uma explicação clara
 do que cada um faz.
 
-✔️ push() 
+push() 
 → adiciona um ou mais elementos NO FINAL do array
 → modifica o array original
 
-✔️ pop() 
+pop() 
 → remove o ÚLTIMO elemento do array
 → modifica o array original
 
-✔️ unshift() 
+unshift() 
 → adiciona um ou mais elementos NO INÍCIO do array
 → modifica o array original
 
-✔️ shift() 
+shift() 
 → remove o PRIMEIRO elemento do array
 → modifica o array original
 
-✔️ indexOf() 
+indexOf() 
 → retorna o índice (posição) de um elemento
 → se não encontrar, retorna -1
 
-✔️ includes() 
+includes() 
 → verifica se um elemento existe no array
 → retorna true ou false
 
-✔️ slice() 
+slice() 
 → recorta uma parte do array
 → NÃO altera o array original
 → o segundo índice não é incluído
 
-✔️ splice() 
+splice() 
 → remove, adiciona ou substitui elementos
 → ALTERA o array original
 */
@@ -937,50 +937,50 @@ Esses métodos são muito usados no dia a dia do JavaScript
 para percorrer, transformar, filtrar e analisar arrays
 de forma mais clara, legível e funcional.
 
-✔️ forEach() 
+forEach() 
 → percorre todos os elementos do array
 → executa uma função para cada item
 → NÃO retorna um novo array (retorno é undefined)
 
-✔️ map() 
+map() 
 → transforma cada elemento do array
 → retorna um NOVO array com os valores modificados
 → NÃO altera o array original
 
-✔️ filter() 
+filter() 
 → filtra elementos com base em uma condição
 → retorna um NOVO array apenas com os elementos aprovados
 → NÃO altera o array original
 
-✔️ reduce() 
+reduce() 
 → reduz o array a um único valor (número, string, objeto, etc.)
 → usa um acumulador que guarda o resultado parcial
 → muito usado para somas, médias, contagens e agrupamentos
 
-✔️ some() 
+some() 
 → verifica se PELO MENOS UM elemento atende à condição
 → retorna true ou false
 → para a execução assim que encontra um caso verdadeiro
 
-✔️ every() 
+every() 
 → verifica se TODOS os elementos atendem à condição
 → retorna true ou false
 → para a execução assim que encontra um caso falso
 
-✔️ find() 
+find() 
 → retorna o PRIMEIRO elemento que satisfaz a condição
 → se não encontrar, retorna undefined
 
-✔️ reverse() 
+reverse() 
 → inverte a ordem dos elementos do array
 → ALTERA o array original
 
-✔️ split() 
+split() 
 → divide uma STRING em um ARRAY
 → o separador define onde a string será cortada
 → MÉTODO DE STRING
 
-✔️ join() 
+join() 
 → junta os elementos de um ARRAY em uma STRING
 → o separador define como os elementos serão unidos
 → MÉTODO DE ARRAY
@@ -1092,14 +1092,14 @@ console.log("Frase invertida (join):", fraseInvertida);
 ============================================================
  DICAS IMPORTANTES:
 
-✔️ Arrays são estruturas dinâmicas — podem crescer ou diminuir.
-✔️ Os índices começam em 0.
-✔️ map, filter e reduce são essenciais para programação funcional.
-✔️ forEach é ideal quando você só precisa executar ações, sem retorno.
-✔️ some e every são eficientes, pois interrompem a execução cedo.
-✔️ reverse() altera o array original — use com cuidado.
-✔️ Esses métodos deixam o código mais limpo, legível e profissional.
-✔️ São amplamente usados em React, Node.js e APIs REST.
+Arrays são estruturas dinâmicas — podem crescer ou diminuir.
+Os índices começam em 0.
+map, filter e reduce são essenciais para programação funcional.
+forEach é ideal quando você só precisa executar ações, sem retorno.
+some e every são eficientes, pois interrompem a execução cedo.
+reverse() altera o array original — use com cuidado.
+Esses métodos deixam o código mais limpo, legível e profissional.
+São amplamente usados em React, Node.js e APIs REST.
 
 /*
 ============================================================
@@ -1284,9 +1284,9 @@ console.log("Soma com função aninhada:", operacao(2, 3));
 ============================================================
 
 Em JavaScript, funções são **valores**. Você pode:
-✔️ Atribuí-las a variáveis
-✔️ Passá-las como argumentos
-✔️ Retorná-las de outras funções
+Atribuí-las a variáveis
+Passá-las como argumentos
+Retorná-las de outras funções
 */
 
 function executar(outraFuncao) {
@@ -1323,7 +1323,7 @@ carregarPagina(function () {
 
 Uma função recursiva é aquela que **chama a si mesma** para resolver um problema, dividindo-o em partes menores e idênticas.
 
-✔️ **Necessita de uma condição de parada (Caso Base)** para evitar um loop infinito (`Stack Overflow`).
+**Necessita de uma condição de parada (Caso Base)** para evitar um loop infinito (`Stack Overflow`).
 
  EXEMPLO: Cálculo de Fatorial (5! = 5 * 4 * 3 * 2 * 1)
 */

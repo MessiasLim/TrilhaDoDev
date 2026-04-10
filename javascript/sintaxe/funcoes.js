@@ -1,4 +1,3 @@
-
 /*
 ==============================================
 ====== AULA 6: FUNÇÕES EM JAVASCRIPT ======
@@ -174,9 +173,9 @@ console.log("Soma com função aninhada:", operacao(2, 3));
 ============================================================
 
 Em JavaScript, funções são **valores**. Você pode:
-✔️ Atribuí-las a variáveis
-✔️ Passá-las como argumentos
-✔️ Retorná-las de outras funções
+Atribuí-las a variáveis
+Passá-las como argumentos
+Retorná-las de outras funções
 */
 
 function executar(outraFuncao) {
@@ -213,7 +212,7 @@ carregarPagina(function () {
 
 Uma função recursiva é aquela que **chama a si mesma** para resolver um problema, dividindo-o em partes menores e idênticas.
 
-✔️ **Necessita de uma condição de parada (Caso Base)** para evitar um loop infinito (`Stack Overflow`).
+**Necessita de uma condição de parada (Caso Base)** para evitar um loop infinito (`Stack Overflow`).
 
  EXEMPLO: Cálculo de Fatorial (5! = 5 * 4 * 3 * 2 * 1)
 */

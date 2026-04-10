@@ -1,4 +1,3 @@
-
 /*
 =================================================================
 ====== AULA 4: LAÇOS DE REPETIÇÃO (LOOPS) EM JAVASCRIPT ======
@@ -142,12 +141,12 @@ for (let i = 1; i <= 5; i++) {
 ============================================================
  RESUMO DOS LAÇOS
 
-✔️ FOR → quando souber o número de repetições
-✔️ WHILE → quando não souber o número de repetições, mas souber a condição de parada
-✔️ DO WHILE → quando quiser executar pelo menos uma vez antes de verificar a condição
+FOR → quando souber o número de repetições
+WHILE → quando não souber o número de repetições, mas souber a condição de parada
+DO WHILE → quando quiser executar pelo menos uma vez antes de verificar a condição
 
-✔️ BREAK → interrompe o laço
-✔️ CONTINUE → pula a iteração atual
+BREAK → interrompe o laço
+CONTINUE → pula a iteração atual
 
 ============================================================
 */

@@ -1,4 +1,3 @@
-
 /*
 =====================================================
 ======== AULA 2: OPERADORES EM JAVASCRIPT ========
@@ -10,10 +9,10 @@ Operadores são símbolos especiais que dizem ao computador para realizar uma op
 
 Eles são a base da construção de decisões e cálculos nos programas.
 
-👇 A seguir, vamos ver os principais tipos de operadores em JavaScript:
+A seguir, vamos ver os principais tipos de operadores em JavaScript:
 
 ============================================================
-🔢 1. OPERADORES ARITMÉTICOS (Matemáticos)
+1. OPERADORES ARITMÉTICOS (Matemáticos)
 ============================================================
 
 Esses operadores lidam com números. Eles servem para fazer contas:
@@ -164,7 +163,7 @@ console.log("É menor ou sem carteira?", idade1 < 18 || !temCarteira); // false
 
 /*
 ============================================================
-🧬 5. OPERADORES DE INCREMENTO E DECREMENTO
+5. OPERADORES DE INCREMENTO E DECREMENTO
 ============================================================
 
 ++ ➜ incrementa 1 unidade
@@ -196,9 +195,9 @@ console.log("++x:", ++y); // 7 (incrementa antes)
 ============================================================
  BOAS PRÁTICAS
 
-✔️ Use === e !== sempre que possível (evita bugs com conversão de tipo)
-✔️ Deixe o código claro: evite condições complicadas demais
-✔️ Use parênteses para organizar condições lógicas complexas
+Use === e !== sempre que possível (evita bugs com conversão de tipo)
+Deixe o código claro: evite condições complicadas demais
+Use parênteses para organizar condições lógicas complexas
 
 ============================================================
 

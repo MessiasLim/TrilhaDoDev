@@ -1,4 +1,3 @@
-
 /*
 ============================================================
 ===== AULA 7: OBJETOS EM JAVASCRIPT =====
@@ -11,9 +10,9 @@ pares chave:valor. Enquanto arrays usam índices numéricos, objetos usam nomes
 descritivos para acessar os dados.
 
 Objetos servem para:
-✓ Guardar dados estruturados (dados de uma pessoa, produto, etc.)
-✓ Agrupar propriedades e métodos relacionados
-✓ Representar entidades do mundo real de forma organizada
+- Guardar dados estruturados (dados de uma pessoa, produto, etc.)
+- Agrupar propriedades e métodos relacionados
+- Representar entidades do mundo real de forma organizada
 
 EXEMPLO:
 let pessoa = {

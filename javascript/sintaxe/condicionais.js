@@ -1,5 +1,3 @@
-
-
 /*
 ============================================================
 ===== AULA 3: ESTRUTURAS CONDICIONAIS EM JAVASCRIPT =====
@@ -11,7 +9,7 @@ As estruturas condicionais permitem que um programa tome decisões com base em d
 
  Em outras palavras: "Se algo for verdadeiro, faça isso. Se não, faça aquilo."
 
-👉 Isso é essencial para criar lógica nos programas.
+Isso é essencial para criar lógica nos programas.
 
 ============================================================
  1. IF, ELSE IF, ELSE
@@ -123,9 +121,9 @@ switch (opcao) {
 /*
  IMPORTANTE:
 
-✔️ Use IF/ELSE para decisões com múltiplas condições complexas (>, <, ==, etc.)
-✔️ Use SWITCH para comparar valores exatos com muitas opções
-✔️ Use o OPERADOR TERNÁRIO para decisões simples e rápidas
+Use IF/ELSE para decisões com múltiplas condições complexas (>, <, ==, etc.)
+Use SWITCH para comparar valores exatos com muitas opções
+Use o OPERADOR TERNÁRIO para decisões simples e rápidas
 
 ============================================================
  DICAS DE LEITURA LÓGICA
