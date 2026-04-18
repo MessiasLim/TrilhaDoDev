@@ -6,7 +6,7 @@
 
     // Bloco 1: Variáveis, Tipos e Operadores
 
-    // 1 - Crie um script que declare as variáveis nome, idade e cidade usando const e imprima uma frase utilizando concatenação de strings (template literal).   FEITO!
+    // 1 - Crie um script que declare as variáveis nome, idade e cidade usando const e imprima uma frase utilizando concatenação de strings (template literal).   !
 
     // const nome = 'Messias',
     // idade = 18,
@@ -15,7 +15,7 @@
 
 
 
-    // 2 - Declare duas variáveis numéricas e imprima o resultado da soma, subtração, multiplicação, divisão e módulo (%) entre elas. FEITO!
+    // 2 - Declare duas variáveis numéricas e imprima o resultado da soma, subtração, multiplicação, divisão e módulo (%) entre elas. !
 
     //  const num1 = 8,
     // num2 = 2;
@@ -27,7 +27,7 @@
 
 
 
-    // 3 - Utilize o prompt() para pedir a base e a altura de um retângulo e calcule sua área. FEITO!
+    // 3 - Utilize o prompt() para pedir a base e a altura de um retângulo e calcule sua área. !
 
     // const base = parseInt(prompt('digite a base'));
     // const altura = parseInt(prompt('digite a altura'));
@@ -36,7 +36,7 @@
 
 
 
-    // 4 - Crie uma variável peso e uma variável altura. Calcule o IMC e imprima o resultado no console. FEITO!
+    // 4 - Crie uma variável peso e uma variável altura. Calcule o IMC e imprima o resultado no console. !
 
     // let peso = 82,
     // altura = 1.74;
@@ -45,14 +45,14 @@
 
 
 
-    // 5 - Converta a string "150" para um número inteiro e realize uma soma com o número 50. FEITO!
+    // 5 - Converta a string "150" para um número inteiro e realize uma soma com o número 50. !
 
     // let string = "150";
     // console.log(typeof +string);
 
 
 
-    // 6 - Declare uma variável numero e use os operadores de incremento (++) e decremento (--). FEITO!
+    // 6 - Declare uma variável numero e use os operadores de incremento (++) e decremento (--). !
 
     // let num = 5;
     // console.log(--num);
@@ -60,7 +60,7 @@
 
 
 
-    // 7 - Crie um template literal que inclua uma expressão matemática, por exemplo: A soma de 5 + 3 é ${5 + 3}. FEITO!
+    // 7 - Crie um template literal que inclua uma expressão matemática, por exemplo: A soma de 5 + 3 é ${5 + 3}. !
 
     // const num1 = 5,
     // num2 = 5;
@@ -69,7 +69,7 @@
 
 
 
-    // 8 - Peça ao usuário o valor total de uma compra e calcule o valor com 10% de desconto.  FEITO!
+    // 8 - Peça ao usuário o valor total de uma compra e calcule o valor com 10% de desconto.  !
 
     // const valor = parseInt(prompt("Digite o valor de um produto"));
     // let valordesconto = valor*0.10;
@@ -77,14 +77,14 @@
     
     
 
-    // 9 - Declare um array com 4 cores diferentes e acesse e imprima a segunda cor. FEITO!
+    // 9 - Declare um array com 4 cores diferentes e acesse e imprima a segunda cor. !
 
     // const cores = ['vermelho', 'verde', 'preto', 'azul'];
     // console.log(cores[1]);
 
 
 
-    // 10 - Crie um objeto carro com as propriedades marca e ano, e imprima o ano do carro. FEITO!
+    // 10 - Crie um objeto carro com as propriedades marca e ano, e imprima o ano do carro. !
 
     // const carro = {
     //     marca: 'BMW',
@@ -99,7 +99,7 @@
 // ============================================
 
 
-    // 11 - Peça um número e use um if/else para determinar se ele é positivo ou negativo (0 é positivo). FEITO!
+    // 11 - Peça um número e use um if/else para determinar se ele é positivo ou negativo (0 é positivo). !
 
     // const num = parseInt(prompt("digite um número!"));
     // if (num >=0) {
@@ -124,7 +124,7 @@
     //}else{
     //    alert("você não pode usar essa aplicação")
     //}
-    //Use o operador ternário (? :) para verificar se um número é par ou ímpar e imprima a resposta. FEITO!
+    //Use o operador ternário (? :) para verificar se um número é par ou ímpar e imprima a resposta. !
 
     // const num = 8;
     // let resultado = (num%2 === 0) ? "par" : "impar";
@@ -132,7 +132,7 @@
 
 
 
-    // 12 - Peça a idade e use um if/else if/else para classificar: "Criança" (0-12), "Adolescente" (13-17), "Adulto" (>=18). FEITO!
+    // 12 - Peça a idade e use um if/else if/else para classificar: "Criança" (0-12), "Adolescente" (13-17), "Adulto" (>=18). !
 
     // const idade = parseInt(prompt("digite sua idade!"));
     // if ((idade >= 0) && (idade<=12)) {
@@ -147,7 +147,7 @@
 
 
 
-    // 13 - Peça duas notas. Se a média for maior ou igual a 7, imprima "Aprovado"; caso contrário, "Reprovado". FEITO!
+    // 13 - Peça duas notas. Se a média for maior ou igual a 7, imprima "Aprovado"; caso contrário, "Reprovado". !
 
     // const nota1 = parseInt(prompt("digite a primeira nota"));
     // const nota2 = parseInt(prompt("digite a segunda nota"));
@@ -160,7 +160,7 @@
 
 
 
-    // 14 - Peça um dia da semana (número de 1 a 7) e use um bloco switch para imprimir o nome correspondente.  FEITO!
+    // 14 - Peça um dia da semana (número de 1 a 7) e use um bloco switch para imprimir o nome correspondente.  !
 
     // const dia = parseInt(prompt("digite um dia da semana."));
     // switch (dia) {
@@ -199,7 +199,7 @@
 
 
 
-    // 15 - Verifique se um usuário pode acessar um site. Ele deve ser maiorDeIdade E ter possuiPermissao (ambas booleanas). FEITO!
+    // 15 - Verifique se um usuário pode acessar um site. Ele deve ser maiorDeIdade E ter possuiPermissao (ambas booleanas). !
 
     // const idade = 18;
     // const permicao = true;
@@ -212,7 +212,7 @@
 
 
 
-    // 16 - Verifique se um dia da semana é Sábado OU Domingo para imprimir "Fim de Semana". FEITO!
+    // 16 - Verifique se um dia da semana é Sábado OU Domingo para imprimir "Fim de Semana". !
 
     // const dia = "terça";
     // if (dia === "domingo" || dia === "sábado") {
@@ -223,7 +223,7 @@
 
 
 
-    // 17 - Leia três números e use aninhamento de if/else para determinar qual é o maior. FEITO!
+    // 17 - Leia três números e use aninhamento de if/else para determinar qual é o maior. !
 
     // const num1 = 15;
     // const num2 = 7;
@@ -243,7 +243,7 @@
 
 
 
-    // 18 - Simule o login. Peça username e senha fixas. Imprima "Login Efetuado" se ambos estiverem corretos. FEITO!
+    // 18 - Simule o login. Peça username e senha fixas. Imprima "Login Efetuado" se ambos estiverem corretos. !
 
     // alert("====== Bem-vindo faça seu login ======")
     // const gmail = prompt("informe seu Gmail");
@@ -257,7 +257,7 @@
 
 
 
-    // 19 - Peça um número. Use o operador de coalescência nula (??) para definir um valor padrão de 10 caso o usuário não digite nada. NÃO FEITO POR NÃO SABER
+    // 19 - Peça um número. Use o operador de coalescência nula (??) para definir um valor padrão de 10 caso o usuário não digite nada. NÃO  POR NÃO SABER
 
     // let num = prompt("digite um numero");
     // let numPadrao;
@@ -278,7 +278,7 @@
 // ============================================
 
 
-    // 20 - Use um laço for para imprimir todos os números de 1 a 10. FEITO
+    // 20 - Use um laço for para imprimir todos os números de 1 a 10. 
 
     // for (let i = 0; i <= 10; i++) {
     //     console.log(i);
@@ -287,7 +287,7 @@
 
 
 
-    // 21 - Use um laço while para fazer uma contagem regressiva de 5 a 1. FEITO, MAS MAIS CUIDADO
+    // 21 - Use um laço while para fazer uma contagem regressiva de 5 a 1. 
 
     // let num = 5;
     // while (num>=0) {
@@ -296,7 +296,7 @@
 
 
 
-    // 22 - Crie uma função chamada saudar que recebe um nome como parâmetro e retorna "Olá, [Nome]!". FEITO
+    // 22 - Crie uma função chamada saudar que recebe um nome como parâmetro e retorna "Olá, [Nome]!". 
 
     // function saudar(nome){
     //     return `olá ${nome}`;
@@ -305,7 +305,7 @@
 
 
 
-    // 23 - Crie uma função anônima que calcula a área de um círculo (use π≈3.14) e a chame. FEITO
+    // 23 - Crie uma função anônima que calcula a área de um círculo (use π≈3.14) e a chame. 
 
     // const calcula = (raio)=>{
     //     const pi = 3.14;
@@ -315,7 +315,7 @@
 
 
 
-    // 24 - Crie uma arrow function que recebe um número e retorna seu quadrado. FEITO
+    // 24 - Crie uma arrow function que recebe um número e retorna seu quadrado. 
 
     // const quadrado = (num) =>{
     //     return num**2;
@@ -324,7 +324,7 @@
 
 
 
-    // 25 - Itere sobre um array de números usando o método forEach e imprima cada elemento. FEITO
+    // 25 - Itere sobre um array de números usando o método forEach e imprima cada elemento. 
 
     // const numeros = [1,2,3,4,5];
     // numeros.forEach(function(num, index){
@@ -335,7 +335,7 @@
 
 
 
-    // 26 - Peça números ao usuário até que ele digite 0. Use um laço do/while para garantir que o bloco rode pelo menos uma vez. FEITO
+    // 26 - Peça números ao usuário até que ele digite 0. Use um laço do/while para garantir que o bloco rode pelo menos uma vez. 
 
     // let num;
     // do {
@@ -350,7 +350,7 @@
 
 
 
-    // 27 - Crie um laço for para iterar de 1 a 20, mas use continue para pular a impressão dos números múltiplos de 3. FEITO,MAS PRESTE ATEÇÃO NO FOR
+    // 27 - Crie um laço for para iterar de 1 a 20, mas use continue para pular a impressão dos números múltiplos de 3. ,MAS PRESTE ATEÇÃO NO FOR
 
     // for (let i = 1; i <= 20; i++) {
     //     if(i % 3 === 0){
@@ -361,7 +361,7 @@
 
 
 
-    // 28 - Crie uma função que receba um array de números e retorne a soma de todos os elementos, usando um laço for. FEITO
+    // 28 - Crie uma função que receba um array de números e retorne a soma de todos os elementos, usando um laço for. 
 
     // let array = [1,2,3,4,5];
     // function soma(array){
@@ -376,7 +376,7 @@
 
 
 
-    // 29 - Crie um array de 5 strings. Use um laço for...of para imprimi-las em maiúsculas. FEITO
+    // 29 - Crie um array de 5 strings. Use um laço for...of para imprimi-las em maiúsculas. 
 
     // let strings = ["a","b","c","d","e"];
     // for (let string of strings) {
@@ -406,7 +406,7 @@
 // ===============================================
 
 
-    // 30 - Crie uma função que recebe uma callback function e um nome, e executa a callback passando o nome como argumento. FEITO
+    // 30 - Crie uma função que recebe uma callback function e um nome, e executa a callback passando o nome como argumento. 
 
     // addEventListener("click",function(){
     //     console.log("messias");
@@ -415,7 +415,7 @@
 
 
 
-    // 31 - Use o método map em um array de números para retornar um novo array com todos os valores multiplicados por 2. FEITO, MAS ESTUDE MAIS ISSO!
+    // 31 - Use o método map em um array de números para retornar um novo array com todos os valores multiplicados por 2. , MAS ESTUDE MAIS ISSO!
 
     // let array = [1,2,3,4,5];
     // let dobro = array.map(function(i){
@@ -425,7 +425,7 @@
 
 
 
-    // 32 - Use o método filter em um array de idades para retornar apenas as idades maiores que 18. feito
+    // 32 - Use o método filter em um array de idades para retornar apenas as idades maiores que 18. 
 
     // let array = [17,24,39,4,15];
     // let maiorDeIdade = array.filter(function(i){
@@ -435,7 +435,7 @@
 
 
 
-    // 33 - Use o método reduce em um array de preços para calcular o valor total da compra. FEITO, MAS ESTUDE UM POUCO MAIS
+    // 33 - Use o método reduce em um array de preços para calcular o valor total da compra. , MAS ESTUDE UM POUCO MAIS
 
     // let array = [9,14,17];
     // let total = array.reduce(function(acumulador,valorTotal){
@@ -447,7 +447,7 @@
 
 
 
-    // 34 - Dada uma string com palavras separadas por espaço, use split e join para inverter a ordem das palavras (Ex: "Eu sou JavaScript" → "JavaScript sou Eu"). FEITO
+    // 34 - Dada uma string com palavras separadas por espaço, use split e join para inverter a ordem das palavras (Ex: "Eu sou JavaScript" → "JavaScript sou Eu"). 
 
     // let strings = "Eu sou Messias";
     // let palavras = strings.split(" ");
@@ -458,7 +458,7 @@
 
 
 
-    // 35 - Use o método find em um array de objetos produtos para encontrar e retornar o produto com o id: 3. FEITO
+    // 35 - Use o método find em um array de objetos produtos para encontrar e retornar o produto com o id: 3. 
 
     // let produtos = [
     //     {id: 1, produto: "notebook", preco: 2700},
@@ -474,7 +474,7 @@
 
 
 
-    // 36 - Implemente a função que calcula o fatorial de um número usando recursão (função que chama a si mesma). FEITO
+    // 36 - Implemente a função que calcula o fatorial de um número usando recursão (função que chama a si mesma). 
 
     // function calcularFatorial(n){
     //     if (n === 0) {
@@ -488,7 +488,7 @@
 
 
 
-    // 37 - Crie uma função que receba uma lista de nomes e use o método sort para ordená-los em ordem alfabética. FEITO
+    // 37 - Crie uma função que receba uma lista de nomes e use o método sort para ordená-los em ordem alfabética. 
 
     // let nomes = ["Messias", "Lucas", "Ruan", "Davi", "Itallo", "Carlos"];
     // function ordenarNomes(nomesBaguncados){
@@ -586,7 +586,7 @@
     // console.log(`Menor número: ${numeroMenor}`);
 
 
-    // 41 - Crie um objeto aluno com as propriedades nome e notas (array). Use reduce nas notas para calcular e retornar a média do aluno. FEITO
+    // 41 - Crie um objeto aluno com as propriedades nome e notas (array). Use reduce nas notas para calcular e retornar a média do aluno. 
 
     // const aluno = {
     //     nome: "Messias Lima",
@@ -600,7 +600,7 @@
 
 
 
-    // 42 - Crie uma função que receba dois arrays e retorne um novo array contendo apenas os elementos que são comuns a ambos (interseção). FEITO
+    // 42 - Crie uma função que receba dois arrays e retorne um novo array contendo apenas os elementos que são comuns a ambos (interseção). 
 
    // versão feita por Messias
     // const array1 = [1,2,4,6,8,9];
@@ -652,7 +652,7 @@
     
 
 
-    // 43 - Use a desestruturação de objeto ({}) para extrair as variáveis titulo e autor de um objeto livro. FEITO
+    // 43 - Use a desestruturação de objeto ({}) para extrair as variáveis titulo e autor de um objeto livro. 
 
     // const livro = {
     //     autor: "Messias",
@@ -691,7 +691,7 @@
 
 
 
-    // 46 - Crie uma função que receba um objeto e retorne um novo objeto com as chaves e valores invertidos (Ex: {a: 1} \to {1: 'a'}). FEITO!
+    // 46 - Crie uma função que receba um objeto e retorne um novo objeto com as chaves e valores invertidos (Ex: {a: 1} \to {1: 'a'}). !
 
     // function inverterValoresChaves(objeto){
     //     const novoObjeto = {};
