@@ -1,7 +1,6 @@
-# Trilha de Aprendizado Frontend — Material de Referência
+# Trilha do Dev — Material de Referência
 
 > Este é um **material educacional e de referência** que eu organizo e mantenho. 
-> Se você procura por um projeto profissional de produção, veja: [ABSOLUTE DOMINIUS](link)
 
 **Propósito**: Recurso de aprendizado estruturado  
 **Não é**: Um portfólio project (veja meus outros repos)
@@ -15,7 +14,7 @@ Este repositório é útil se você está:
 - Procurando material de referência organizado
 - Preparando conteúdo educacional
 
-**Para ver meus projetos de produção**, procure nos meus [repositórios](https://github.com/MessiasLim) no meu perfil.
+**Para ver meus projetos de produção**, procure nos meus [repositórios](https://github.com/MessiasLim?tab=repositories) no meu perfil.
 
 ---
 
@@ -44,7 +43,7 @@ Este repositório é útil se você está:
 │   ├── exercicios-html/
 │   ├── exercicios-css/
 │   └── exercicios-js/
-└── docs/                    # Guias & material de referência
+└── README.md                    # Guia de referência
 ```
 
 ---
@@ -141,9 +140,10 @@ Cada seção inclui:
 
 ### Links de Referência
 
-* [MDN Web Docs](https://developer.mozilla.org) — Documentação oficial
-* [CSS-Tricks](https://css-tricks.com) — Técnicas avançadas de CSS
-* [Can I Use](https://caniuse.com) — Compatibilidade entre navegadores
+* [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides) — Documentação de referência para HTML
+* [Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides) — Documentação de referência para CSS
+* [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide) — Documentação de referência para JavaScript
+* [LeetCode](https://leetcode.com/problemset/) — Estrutura dos exercicíos
 
 ---
 
