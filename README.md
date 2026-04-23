@@ -39,11 +39,13 @@ Este repositório é útil se você está:
 │   ├── dom/                 # Padrões de manipulação do DOM
 │   ├── eventos/             # Boas práticas com eventos
 │   └── arrays-objetos/      # Estruturas de dados & métodos
+├── git-github/              # Versionamento com Git e GitHub
+│   └── curso-git-github.md
 ├── exercicios/              # Desafios progressivos
 │   ├── exercicios-html/
 │   ├── exercicios-css/
 │   └── exercicios-js/
-└── README.md                    # Guia de referência
+└── README.md                # Guia de referência
 ```
 
 ---
