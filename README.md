@@ -3,7 +3,7 @@
 > Este é um **material educacional e de referência** que eu organizo e mantenho. 
 
 **Propósito**: Recurso de aprendizado estruturado  
-**Não é**: Um portfólio project (veja meus outros repos)
+**Não é**: Um portfólio project (veja meus outros repositórios)
 
 ---
 
@@ -50,30 +50,48 @@ Este repositório é útil se você está:
 
 ---
 
-## Começando Rápido
+Aqui está a versão direta, focando exclusivamente em clonar e rodar o projeto na máquina:
+
+---
+
+## Instalação Local
+
+Siga os passos abaixo para baixar o código e abrir o projeto no seu computador:
+
+### 1. Clone o repositório
+Abra o terminal do seu computador e execute o comando abaixo para baixar o projeto:
+
+```bash
+git clone https://github.com/MessiasLim/TrilhaDoDev.git
+```
+
+### 2. Acesse a pasta do projeto
+Entre no diretório que acabou de ser criado:
+
+```bash
+cd TrilhaDoDev
+```
+
+---
+
+## Como Executar o Projeto
+
+Agora que você já tem o código na sua máquina, escolha uma das opções abaixo para abrir o projeto no navegador:
 
 ### Opção 1: Live Server (VS Code)
 
 ```bash
-# Instale a extensão Live Server
-# Clique com o botão direito em qualquer arquivo .html → "Open with Live Server"
+# Abra a pasta do projeto no VS Code (code .)
+# Instale a extensão "Live Server"
+# Clique com o botão direito no arquivo index.html -> "Open with Live Server"
 ```
 
-### Opção 2: Servidor HTTP com Node
+### Opção 2: Servidor HTTP com Node.js
 
 ```bash
 npx http-server . -c-1 -p 8080
-# Abra http://localhost:8080
+# Abra no navegador: http://localhost:8080
 ```
-
-### Opção 3: Servidor HTTP com Python
-
-```bash
-python3 -m http.server 8080
-# Abra http://localhost:8080
-```
-
----
 
 ## Caminho de Aprendizado
 
@@ -249,5 +267,5 @@ Se essa trilha te ajudou, deixe uma estrela no repositório! Isso ajuda outras p
 
 ---
 
-**Última atualização**: Abril de 2026
+**Última atualização**: Maio de 2026
 **Status**: Ativo e sendo atualizado regularmente
