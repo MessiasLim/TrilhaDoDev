@@ -1,4 +1,4 @@
-# Trilha do Dev — Material de Referência
+# bem-vindos ao Trilha do Dev
 
 > Este é um **material educacional e de referência** que eu organizo e mantenho. 
 
@@ -267,5 +267,6 @@ Se essa trilha te ajudou, deixe uma estrela no repositório! Isso ajuda outras p
 
 ---
 
-**Última atualização**: Maio de 2026
-**Status**: Ativo e sendo atualizado regularmente
+> **Quer contribuir?**
+> 
+> **Acesse**: https://docs.google.com/document/d/1JdzuozDAg7X4OYyD5jCthkBWmJ-oEGC4/edit?usp=drive_link&ouid=109412722254245505453&rtpof=true&sd=true
